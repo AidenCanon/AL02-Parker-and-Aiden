@@ -29,6 +29,11 @@ def build_index(records):
 
 
 def indexed_lookup(index, book_id):
+    if book_id not in index:
+        return None
+    return index.get(book_id)
+
+    
 
 
 
