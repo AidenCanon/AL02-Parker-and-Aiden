@@ -1,27 +1,41 @@
 
-from catalog_data import BOOKS, validate_book_ids
-
-# MONDAY - Implement equivalent lookups after Monday's instruction.
+from Catalog_Data import BOOKS, validate_book_ids
+    
 
 
 def scan_lookup(records, book_id):
+    """ 
+    Look at one record at a time, in its original order.
+    Compare its ID with the requested ID.
+    Return the record immediately when it matches.
+    Return None if you reach the end without a match.
+    Do not change the input records. 
+    """
+    for record in records:
+        if not record.get("id") == book_id:
+            return None
+        return record[0]
+        
 
-    raise NotImplementedError("Implement the first-match scan.")
 
 
 def build_index(records):
+    index = {}
+    for record in records:
+        book_id = record.get("id")
+        index[book_id] = record
+    return index
 
-    raise NotImplementedError("Build the catalog ID index.")
 
 
 def indexed_lookup(index, book_id):
 
-    raise NotImplementedError("Query the existing index.")
+
 
 
 def main():
 
-    print("AL02 starter: begin with the Monday section.")
+
 
 
 # TUESDAY - Recognize growth; wait for Tuesday's instruction.
