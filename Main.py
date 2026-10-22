@@ -1,6 +1,6 @@
 """Optional English-first starter; one recognition-level app across three days."""
 
-from catalog_data import BOOKS, validate_book_ids
+from Catalog_Data import BOOKS, validate_book_ids
 
 # MONDAY - Implement equivalent lookups after Monday's instruction.
 
